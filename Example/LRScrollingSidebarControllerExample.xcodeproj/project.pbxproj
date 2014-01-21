@@ -1,0 +1,538 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		33C7DDB9188CA54D00116FEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C7DDB8188CA54D00116FEC /* Foundation.framework */; };
+		33C7DDBB188CA54D00116FEC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C7DDBA188CA54D00116FEC /* CoreGraphics.framework */; };
+		33C7DDBD188CA54D00116FEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C7DDBC188CA54D00116FEC /* UIKit.framework */; };
+		33C7DDC3188CA54D00116FEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 33C7DDC1188CA54D00116FEC /* InfoPlist.strings */; };
+		33C7DDC5188CA54D00116FEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7DDC4188CA54D00116FEC /* main.m */; };
+		33C7DDC9188CA54D00116FEC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7DDC8188CA54D00116FEC /* AppDelegate.m */; };
+		33C7DDCB188CA54D00116FEC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33C7DDCA188CA54D00116FEC /* Images.xcassets */; };
+		33C7DDD2188CA54D00116FEC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C7DDD1188CA54D00116FEC /* XCTest.framework */; };
+		33C7DDD3188CA54D00116FEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C7DDB8188CA54D00116FEC /* Foundation.framework */; };
+		33C7DDD4188CA54D00116FEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C7DDBC188CA54D00116FEC /* UIKit.framework */; };
+		33C7DDDC188CA54D00116FEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 33C7DDDA188CA54D00116FEC /* InfoPlist.strings */; };
+		33C7DDDE188CA54D00116FEC /* LRScrollingSidebarControllerExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7DDDD188CA54D00116FEC /* LRScrollingSidebarControllerExampleTests.m */; };
+		33F506E0188CA5900066B30B /* LRSidebarScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F506DC188CA5900066B30B /* LRSidebarScrollView.m */; };
+		33F506E1188CA5900066B30B /* LRScrollingSidebarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F506DE188CA5900066B30B /* LRScrollingSidebarController.m */; };
+		33F506EE188CBD910066B30B /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F506ED188CBD910066B30B /* LeftViewController.m */; };
+		33F506F1188CBD9B0066B30B /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F506F0188CBD9B0066B30B /* MainViewController.m */; };
+		33F506F4188CBDA20066B30B /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F506F3188CBDA20066B30B /* RightViewController.m */; };
+		33F506F7188CBF3E0066B30B /* UIViewController+LRScrollingSidebarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F506F6188CBF3E0066B30B /* UIViewController+LRScrollingSidebarController.m */; };
+		33F506F9188DEF230066B30B /* LeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33F506F8188DEF230066B30B /* LeftViewController.xib */; };
+		33F506FB188DEFA50066B30B /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33F506FA188DEFA50066B30B /* MainViewController.xib */; };
+		33F506FD188DEFAD0066B30B /* RightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33F506FC188DEFAD0066B30B /* RightViewController.xib */; };
+		33F50700188E0BB70066B30B /* LRRandomColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F506FF188E0BB70066B30B /* LRRandomColor.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		33C7DDD5188CA54D00116FEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33C7DDAD188CA54D00116FEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 33C7DDB4188CA54D00116FEC;
+			remoteInfo = LRScrollingSidebarControllerExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		33C7DDB5188CA54D00116FEC /* LRScrollingSidebarControllerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LRScrollingSidebarControllerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33C7DDB8188CA54D00116FEC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		33C7DDBA188CA54D00116FEC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		33C7DDBC188CA54D00116FEC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		33C7DDC0188CA54D00116FEC /* LRScrollingSidebarControllerExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LRScrollingSidebarControllerExample-Info.plist"; sourceTree = "<group>"; };
+		33C7DDC2188CA54D00116FEC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		33C7DDC4188CA54D00116FEC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		33C7DDC6188CA54D00116FEC /* LRScrollingSidebarControllerExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LRScrollingSidebarControllerExample-Prefix.pch"; sourceTree = "<group>"; };
+		33C7DDC7188CA54D00116FEC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		33C7DDC8188CA54D00116FEC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		33C7DDCA188CA54D00116FEC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		33C7DDD0188CA54D00116FEC /* LRScrollingSidebarControllerExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LRScrollingSidebarControllerExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		33C7DDD1188CA54D00116FEC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		33C7DDD9188CA54D00116FEC /* LRScrollingSidebarControllerExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LRScrollingSidebarControllerExampleTests-Info.plist"; sourceTree = "<group>"; };
+		33C7DDDB188CA54D00116FEC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		33C7DDDD188CA54D00116FEC /* LRScrollingSidebarControllerExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LRScrollingSidebarControllerExampleTests.m; sourceTree = "<group>"; };
+		33F506DB188CA5900066B30B /* LRSidebarScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LRSidebarScrollView.h; path = ../../LRScrollingSidebarController/LRSidebarScrollView.h; sourceTree = "<group>"; };
+		33F506DC188CA5900066B30B /* LRSidebarScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LRSidebarScrollView.m; path = ../../LRScrollingSidebarController/LRSidebarScrollView.m; sourceTree = "<group>"; };
+		33F506DD188CA5900066B30B /* LRScrollingSidebarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LRScrollingSidebarController.h; path = ../../LRScrollingSidebarController/LRScrollingSidebarController.h; sourceTree = "<group>"; };
+		33F506DE188CA5900066B30B /* LRScrollingSidebarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LRScrollingSidebarController.m; path = ../../LRScrollingSidebarController/LRScrollingSidebarController.m; sourceTree = "<group>"; };
+		33F506E2188CB3DF0066B30B /* LRSidebarScrollView+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "LRSidebarScrollView+Private.h"; path = "../../LRScrollingSidebarController/LRSidebarScrollView+Private.h"; sourceTree = "<group>"; };
+		33F506EC188CBD910066B30B /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		33F506ED188CBD910066B30B /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		33F506EF188CBD9B0066B30B /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		33F506F0188CBD9B0066B30B /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; wrapsLines = 0; };
+		33F506F2188CBDA20066B30B /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
+		33F506F3188CBDA20066B30B /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
+		33F506F5188CBF3E0066B30B /* UIViewController+LRScrollingSidebarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+LRScrollingSidebarController.h"; path = "../../LRScrollingSidebarController/UIViewController+LRScrollingSidebarController.h"; sourceTree = "<group>"; };
+		33F506F6188CBF3E0066B30B /* UIViewController+LRScrollingSidebarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+LRScrollingSidebarController.m"; path = "../../LRScrollingSidebarController/UIViewController+LRScrollingSidebarController.m"; sourceTree = "<group>"; };
+		33F506F8188DEF230066B30B /* LeftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftViewController.xib; sourceTree = "<group>"; };
+		33F506FA188DEFA50066B30B /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		33F506FC188DEFAD0066B30B /* RightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightViewController.xib; sourceTree = "<group>"; };
+		33F506FE188E0BB70066B30B /* LRRandomColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRRandomColor.h; sourceTree = "<group>"; };
+		33F506FF188E0BB70066B30B /* LRRandomColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRRandomColor.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		33C7DDB2188CA54D00116FEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33C7DDBB188CA54D00116FEC /* CoreGraphics.framework in Frameworks */,
+				33C7DDBD188CA54D00116FEC /* UIKit.framework in Frameworks */,
+				33C7DDB9188CA54D00116FEC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33C7DDCD188CA54D00116FEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33C7DDD2188CA54D00116FEC /* XCTest.framework in Frameworks */,
+				33C7DDD4188CA54D00116FEC /* UIKit.framework in Frameworks */,
+				33C7DDD3188CA54D00116FEC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		33C7DDAC188CA54D00116FEC = {
+			isa = PBXGroup;
+			children = (
+				33C7DDBE188CA54D00116FEC /* LRScrollingSidebarControllerExample */,
+				33C7DDD7188CA54D00116FEC /* LRScrollingSidebarControllerExampleTests */,
+				33C7DDB7188CA54D00116FEC /* Frameworks */,
+				33C7DDB6188CA54D00116FEC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		33C7DDB6188CA54D00116FEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				33C7DDB5188CA54D00116FEC /* LRScrollingSidebarControllerExample.app */,
+				33C7DDD0188CA54D00116FEC /* LRScrollingSidebarControllerExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		33C7DDB7188CA54D00116FEC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33C7DDB8188CA54D00116FEC /* Foundation.framework */,
+				33C7DDBA188CA54D00116FEC /* CoreGraphics.framework */,
+				33C7DDBC188CA54D00116FEC /* UIKit.framework */,
+				33C7DDD1188CA54D00116FEC /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		33C7DDBE188CA54D00116FEC /* LRScrollingSidebarControllerExample */ = {
+			isa = PBXGroup;
+			children = (
+				33F50701188E0C890066B30B /* Random Color Helper */,
+				33F506EB188CBD790066B30B /* Sidebar Controllers */,
+				33F506DA188CA57C0066B30B /* LRScrollingSidebarController */,
+				33C7DDC7188CA54D00116FEC /* AppDelegate.h */,
+				33C7DDC8188CA54D00116FEC /* AppDelegate.m */,
+				33C7DDCA188CA54D00116FEC /* Images.xcassets */,
+				33C7DDBF188CA54D00116FEC /* Supporting Files */,
+			);
+			path = LRScrollingSidebarControllerExample;
+			sourceTree = "<group>";
+		};
+		33C7DDBF188CA54D00116FEC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				33C7DDC0188CA54D00116FEC /* LRScrollingSidebarControllerExample-Info.plist */,
+				33C7DDC1188CA54D00116FEC /* InfoPlist.strings */,
+				33C7DDC4188CA54D00116FEC /* main.m */,
+				33C7DDC6188CA54D00116FEC /* LRScrollingSidebarControllerExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		33C7DDD7188CA54D00116FEC /* LRScrollingSidebarControllerExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				33C7DDDD188CA54D00116FEC /* LRScrollingSidebarControllerExampleTests.m */,
+				33C7DDD8188CA54D00116FEC /* Supporting Files */,
+			);
+			path = LRScrollingSidebarControllerExampleTests;
+			sourceTree = "<group>";
+		};
+		33C7DDD8188CA54D00116FEC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				33C7DDD9188CA54D00116FEC /* LRScrollingSidebarControllerExampleTests-Info.plist */,
+				33C7DDDA188CA54D00116FEC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		33F506DA188CA57C0066B30B /* LRScrollingSidebarController */ = {
+			isa = PBXGroup;
+			children = (
+				33F506DD188CA5900066B30B /* LRScrollingSidebarController.h */,
+				33F506DE188CA5900066B30B /* LRScrollingSidebarController.m */,
+				33F506DB188CA5900066B30B /* LRSidebarScrollView.h */,
+				33F506DC188CA5900066B30B /* LRSidebarScrollView.m */,
+				33F506E2188CB3DF0066B30B /* LRSidebarScrollView+Private.h */,
+				33F506F5188CBF3E0066B30B /* UIViewController+LRScrollingSidebarController.h */,
+				33F506F6188CBF3E0066B30B /* UIViewController+LRScrollingSidebarController.m */,
+			);
+			name = LRScrollingSidebarController;
+			sourceTree = "<group>";
+		};
+		33F506EB188CBD790066B30B /* Sidebar Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				33F506EC188CBD910066B30B /* LeftViewController.h */,
+				33F506ED188CBD910066B30B /* LeftViewController.m */,
+				33F506F8188DEF230066B30B /* LeftViewController.xib */,
+				33F506EF188CBD9B0066B30B /* MainViewController.h */,
+				33F506F0188CBD9B0066B30B /* MainViewController.m */,
+				33F506FA188DEFA50066B30B /* MainViewController.xib */,
+				33F506F2188CBDA20066B30B /* RightViewController.h */,
+				33F506F3188CBDA20066B30B /* RightViewController.m */,
+				33F506FC188DEFAD0066B30B /* RightViewController.xib */,
+			);
+			name = "Sidebar Controllers";
+			sourceTree = "<group>";
+		};
+		33F50701188E0C890066B30B /* Random Color Helper */ = {
+			isa = PBXGroup;
+			children = (
+				33F506FE188E0BB70066B30B /* LRRandomColor.h */,
+				33F506FF188E0BB70066B30B /* LRRandomColor.m */,
+			);
+			name = "Random Color Helper";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		33C7DDB4188CA54D00116FEC /* LRScrollingSidebarControllerExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33C7DDE1188CA54D00116FEC /* Build configuration list for PBXNativeTarget "LRScrollingSidebarControllerExample" */;
+			buildPhases = (
+				33C7DDB1188CA54D00116FEC /* Sources */,
+				33C7DDB2188CA54D00116FEC /* Frameworks */,
+				33C7DDB3188CA54D00116FEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LRScrollingSidebarControllerExample;
+			productName = LRScrollingSidebarControllerExample;
+			productReference = 33C7DDB5188CA54D00116FEC /* LRScrollingSidebarControllerExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		33C7DDCF188CA54D00116FEC /* LRScrollingSidebarControllerExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33C7DDE4188CA54D00116FEC /* Build configuration list for PBXNativeTarget "LRScrollingSidebarControllerExampleTests" */;
+			buildPhases = (
+				33C7DDCC188CA54D00116FEC /* Sources */,
+				33C7DDCD188CA54D00116FEC /* Frameworks */,
+				33C7DDCE188CA54D00116FEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33C7DDD6188CA54D00116FEC /* PBXTargetDependency */,
+			);
+			name = LRScrollingSidebarControllerExampleTests;
+			productName = LRScrollingSidebarControllerExampleTests;
+			productReference = 33C7DDD0188CA54D00116FEC /* LRScrollingSidebarControllerExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		33C7DDAD188CA54D00116FEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Luis Recuenco";
+				TargetAttributes = {
+					33C7DDCF188CA54D00116FEC = {
+						TestTargetID = 33C7DDB4188CA54D00116FEC;
+					};
+				};
+			};
+			buildConfigurationList = 33C7DDB0188CA54D00116FEC /* Build configuration list for PBXProject "LRScrollingSidebarControllerExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 33C7DDAC188CA54D00116FEC;
+			productRefGroup = 33C7DDB6188CA54D00116FEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				33C7DDB4188CA54D00116FEC /* LRScrollingSidebarControllerExample */,
+				33C7DDCF188CA54D00116FEC /* LRScrollingSidebarControllerExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		33C7DDB3188CA54D00116FEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33C7DDC3188CA54D00116FEC /* InfoPlist.strings in Resources */,
+				33F506FD188DEFAD0066B30B /* RightViewController.xib in Resources */,
+				33F506F9188DEF230066B30B /* LeftViewController.xib in Resources */,
+				33C7DDCB188CA54D00116FEC /* Images.xcassets in Resources */,
+				33F506FB188DEFA50066B30B /* MainViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33C7DDCE188CA54D00116FEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33C7DDDC188CA54D00116FEC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		33C7DDB1188CA54D00116FEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33F506F4188CBDA20066B30B /* RightViewController.m in Sources */,
+				33F506E1188CA5900066B30B /* LRScrollingSidebarController.m in Sources */,
+				33F506F1188CBD9B0066B30B /* MainViewController.m in Sources */,
+				33F506F7188CBF3E0066B30B /* UIViewController+LRScrollingSidebarController.m in Sources */,
+				33F506EE188CBD910066B30B /* LeftViewController.m in Sources */,
+				33F506E0188CA5900066B30B /* LRSidebarScrollView.m in Sources */,
+				33F50700188E0BB70066B30B /* LRRandomColor.m in Sources */,
+				33C7DDC9188CA54D00116FEC /* AppDelegate.m in Sources */,
+				33C7DDC5188CA54D00116FEC /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33C7DDCC188CA54D00116FEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33C7DDDE188CA54D00116FEC /* LRScrollingSidebarControllerExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		33C7DDD6188CA54D00116FEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 33C7DDB4188CA54D00116FEC /* LRScrollingSidebarControllerExample */;
+			targetProxy = 33C7DDD5188CA54D00116FEC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		33C7DDC1188CA54D00116FEC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33C7DDC2188CA54D00116FEC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		33C7DDDA188CA54D00116FEC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				33C7DDDB188CA54D00116FEC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		33C7DDDF188CA54D00116FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		33C7DDE0188CA54D00116FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		33C7DDE2188CA54D00116FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LRScrollingSidebarControllerExample/LRScrollingSidebarControllerExample-Prefix.pch";
+				INFOPLIST_FILE = "LRScrollingSidebarControllerExample/LRScrollingSidebarControllerExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		33C7DDE3188CA54D00116FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LRScrollingSidebarControllerExample/LRScrollingSidebarControllerExample-Prefix.pch";
+				INFOPLIST_FILE = "LRScrollingSidebarControllerExample/LRScrollingSidebarControllerExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		33C7DDE5188CA54D00116FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LRScrollingSidebarControllerExample.app/LRScrollingSidebarControllerExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LRScrollingSidebarControllerExample/LRScrollingSidebarControllerExample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "LRScrollingSidebarControllerExampleTests/LRScrollingSidebarControllerExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		33C7DDE6188CA54D00116FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LRScrollingSidebarControllerExample.app/LRScrollingSidebarControllerExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LRScrollingSidebarControllerExample/LRScrollingSidebarControllerExample-Prefix.pch";
+				INFOPLIST_FILE = "LRScrollingSidebarControllerExampleTests/LRScrollingSidebarControllerExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		33C7DDB0188CA54D00116FEC /* Build configuration list for PBXProject "LRScrollingSidebarControllerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33C7DDDF188CA54D00116FEC /* Debug */,
+				33C7DDE0188CA54D00116FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33C7DDE1188CA54D00116FEC /* Build configuration list for PBXNativeTarget "LRScrollingSidebarControllerExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33C7DDE2188CA54D00116FEC /* Debug */,
+				33C7DDE3188CA54D00116FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33C7DDE4188CA54D00116FEC /* Build configuration list for PBXNativeTarget "LRScrollingSidebarControllerExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33C7DDE5188CA54D00116FEC /* Debug */,
+				33C7DDE6188CA54D00116FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 33C7DDAD188CA54D00116FEC /* Project object */;
+}
