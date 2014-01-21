@@ -5,5 +5,7 @@ rvm: 1.9.3
 before_install:
   - cd Example
   - brew update
+  - brew uninstall xctool
+  - brew install xctool --HEAD
 script:
   - xctool -project LRScrollingSidebarControllerExample.xcodeproj -scheme LRScrollingSidebarControllerExample -configuration Debug -arch i386 test -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
