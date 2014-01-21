@@ -41,9 +41,14 @@ typedef UIViewController<LRScrollingSidebarController> *ISSidePanelController;
 
 @property (nonatomic, readonly) CGFloat mainViewControllerGap;
 
+@property (nonatomic) UIColor *mainViewControllerOverlayColor;
+@property (nonatomic) CGFloat mainViewControllerOverlayMaxAlpha;
+
 @property (nonatomic) NSTimeInterval animationTime;
 @property (nonatomic) CGFloat animationBounce;
+
 @property (nonatomic) BOOL allowBouncing;
+@property (nonatomic) BOOL allowParallax;
 
 @property (nonatomic, weak) id<LRScrollingSidebarControllerDelegate> delegate;
 

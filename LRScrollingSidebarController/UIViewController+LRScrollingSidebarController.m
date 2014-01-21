@@ -14,7 +14,7 @@
 - (LRScrollingSidebarController *)scrollingSidebarController
 {
     return objc_getAssociatedObject(self, @selector(scrollingSidebarController));
-
+    
 }
 
 - (void)setScrollingSidebarController:(LRScrollingSidebarController *)scrollingSidebarController

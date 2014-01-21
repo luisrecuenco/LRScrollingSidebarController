@@ -29,11 +29,14 @@ NSString *const kScrollViewWillBeginDraggingNotification = @"kScrollViewWillBegi
 NSString *const kScrollViewDidEndDraggingNotification = @"kScrollViewDidEndDraggingNotification";
 NSString *const kScrollViewDidEndDeceleratingNotification = @"kScrollViewDidEndDeceleratingNotification";
 
-static NSUInteger const kShadowOffset = 45;
+static CGFloat const kParallaxEffectConstant = 0.15f;
+static CGFloat const kMainViewControllerOverlayMaxAlpha = 0.9f;
 
 @interface LRScrollingSidebarController () <UIScrollViewDelegate>
 
 @property (nonatomic, strong) LRSidebarScrollView *scrollView;
+
+@property (nonatomic, strong) UIView *overlay;
 
 @end
 
@@ -49,11 +52,19 @@ static NSUInteger const kShadowOffset = 45;
     _leftViewController = leftViewController;
     _mainViewController = mainViewController;
     _rightViewController = rightViewController;
-
+    
     _mainViewControllerGap = mainViewControllerGap;
-    _allowBouncing = YES;
+    
+    [self applyDefaults];
     
     return self;
+}
+
+- (void)applyDefaults
+{
+    _allowBouncing = YES;
+    _allowParallax = YES;
+    _mainViewControllerOverlayMaxAlpha = kMainViewControllerOverlayMaxAlpha;
 }
 
 - (void)loadView
@@ -76,7 +87,6 @@ static NSUInteger const kShadowOffset = 45;
     });
     
     [self buildUpMainHierarchy];
-    
     [self showLeftViewControllerAnimated:NO];
     [self activateScrollingSidebarNavigation];
 }
@@ -86,6 +96,11 @@ static NSUInteger const kShadowOffset = 45;
     [self replaceLeftViewController:self.leftViewController];
     [self replaceRightViewController:self.rightViewController];
     [self replaceMainViewController:self.mainViewController];
+    
+    self.overlay = [[UIView alloc] initWithFrame:self.mainViewController.view.bounds];
+    self.overlay.backgroundColor = self.mainViewControllerOverlayColor;
+    self.overlay.alpha = self.mainViewControllerOverlayMaxAlpha;
+    [self.mainViewController.view addSubview:self.overlay];
     
     [self.view addSubview:self.scrollView];
 }
@@ -118,6 +133,9 @@ static NSUInteger const kShadowOffset = 45;
     [self addSidePanelViewController:_mainViewController
                           parentView:self.scrollView];
     [self.view bringSubviewToFront:self.scrollView];
+    
+    self.overlay.frame = self.mainViewController.view.bounds;
+    [self.mainViewController.view addSubview:self.overlay];
 }
 
 - (void)replaceRightViewController:(ISSidePanelController)rightViewController
@@ -250,6 +268,57 @@ static NSUInteger const kShadowOffset = 45;
         self.rightViewController.view.hidden = self.scrollView.contentOffset.x < scrollViewFrameWidth;
         self.leftViewController.view.hidden = self.scrollView.contentOffset.x > scrollViewFrameWidth;
     }
+    
+    [self applyParallaxEffect];
+    [self applyOverlayEffect];
+}
+
+- (void)applyParallaxEffect
+{
+    if (!self.allowParallax) return;
+    
+    if ([self isDraggingLeft])
+    {
+        self.leftViewController.view.frame =
+        ({
+            CGRect frame = self.leftViewController.view.frame;
+            frame.origin.x = -self.scrollView.contentOffset.x * kParallaxEffectConstant;
+            frame;
+        });
+    }
+    else
+    {
+        self.rightViewController.view.frame =
+        ({
+            CGRect frame = self.rightViewController.view.frame;
+            frame.origin.x = (self.scrollView.frame.size.width - self.scrollView.contentOffset.x) *
+                              kParallaxEffectConstant + self.mainViewControllerGap * 3;
+            frame;
+        });
+    }
+}
+
+- (void)applyOverlayEffect
+{
+    CGFloat mainViewFrameWidth = self.mainViewController.view.frame.size.width;
+    
+    if ([self isDraggingLeft])
+    {
+        self.overlay.alpha = self.mainViewControllerOverlayMaxAlpha - self.scrollView.contentOffset.x *
+        self.mainViewControllerOverlayMaxAlpha / (mainViewFrameWidth - self.mainViewControllerGap * 2);
+    }
+    else
+    {
+        self.overlay.alpha = (self.scrollView.contentOffset.x / (mainViewFrameWidth -
+                              self.mainViewControllerGap * 2) - 1.0f) * self.mainViewControllerOverlayMaxAlpha;
+    }
+}
+
+- (BOOL)isDraggingLeft
+{
+    CGFloat mainViewFrameWidth = self.mainViewController.view.frame.size.width;
+    
+    return self.scrollView.contentOffset.x <= mainViewFrameWidth - self.mainViewControllerGap * 2;
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
