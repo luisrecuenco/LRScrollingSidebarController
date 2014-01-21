@@ -5,9 +5,9 @@ A scrolling based sidebar controller
 
 ### The problem about current implementations
 
-Sidebar controllers are certainly one the the most implemented UX patterns in iOS. They became very popular due to Facebook and Path implementation. Nowdays, there are a lot of them, [too may](http://bitly.com/bundles/o_27ukkruo5l/1) I'd say. They've replaced a lot of the tab-bar based apps, but unfortunately, they all share the same problem, they are all wrong in terms of physics. Yes, there are some out there that are [kind of cool](https://github.com/monospacecollective/MSDynamicsDrawerViewController/) based on iOS 7 dynamics, but still, they don't work the way I expect this kind of controls to work. When you drag and release the panels, you feel like they stop suddenly, sharpely, the panels doesn't flow and slide like they should. Mimicking physics as most of the libraries try is very, very difficult, you won't do it perfectly and you will feel this sudden speed changes or sharpness and abruptness when releasing the finger with a certain velocity.
+Sidebar controllers are certainly one the the most implemented UX patterns in iOS. They became very popular due to Facebook and Path implementation. Nowadays, there are a lot of them, [too may](http://bitly.com/bundles/o_27ukkruo5l/1) I'd say. They've replaced a lot of the tab-bar based apps, but unfortunately, they all share the same problem, they are all wrong in terms of physics. Yes, there are some out there that are [kind of cool](https://github.com/monospacecollective/MSDynamicsDrawerViewController/) based on iOS 7 dynamics, but still, they don't work the way I expect this kind of controls to work. When you drag and release the panels, you feel like they stop suddenly, sharply, the panels don't flow and slide like they should. Mimicking physics as most of the libraries try is very, very difficult, you won't do it perfectly and you will feel this sudden speed changes or sharpness and abruptness when releasing the finger with a certain velocity.
 
-So? What's the solution? Pretty simple actually: use a scroll view. That simple. We are all used to the scroll view physics... why just don't use it for this very purpose? The result is a sidebar controller that is a pleasure to use... Install it on your device and use it, you'll se the different. 
+So? What's the solution? Pretty simple actually: use a scroll view. That simple. We are all used to the scroll view physics... Why just don't use it for this very purpose? The result is a sidebar controller that is a pleasure to use... Install it on your device and use it, you'll se the difference.
 
 This library is one of the reasons why everybody loves to use [iShows](http://ishowsapp.com/)
 
@@ -47,7 +47,7 @@ Then, you can just assign the result as your window root view controller. That's
 
 There are some other cool features you can do with LRScrollingSidebarController.
 
-Customize the animation time:
+Customize the animation time.
 
 ```
 @property (nonatomic) NSTimeInterval animationTime;
@@ -69,7 +69,7 @@ Of course you can disable the bounce animation as well as the default parallax e
 By default, the main panel has an overlay on top of it. You can customize the alpha and color of it.
 
 ```
-@property (nonatomic) UIColor *mainViewControllerOverlayColor;
+@property (nonatomic, strong) UIColor *mainViewControllerOverlayColor;
 @property (nonatomic) CGFloat mainViewControllerOverlayMaxAlpha;
 ```
 
@@ -108,7 +108,7 @@ To get the visible controller.
 
 LRScrollingSidebarController requires both iOS 6.0 and ARC.
 
-You can still use LRNotificationObserver in your non-arc project. Just set -fobjc-arc compiler flag in every source file.
+You can still use LRScrollingSidebarController in your non-arc project. Just set -fobjc-arc compiler flag in every source file.
 
 ### Contact
 
