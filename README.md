@@ -104,6 +104,12 @@ To get the visible controller.
 - (UIViewController *)visibleController;
 ```
 
+The category UIViewController+LRScrollingSidebarController aims at making every view controller have a scrollingSidebarController property (the very same way every view controller has a navigationController, a tabBarController or a splitViewController property). If a view controller is embedded in the scrolling sidebar controller, it will have property pointing weakly to the container, otherwise, it will be nil. This way, you can be at a child controller, and interact directly with the sidebar controller.
+
+```
+[self.scrollingSidebarController showMainViewControllerAnimated:YES];
+```
+
 ### Requirements
 
 LRScrollingSidebarController requires both iOS 6.0 and ARC.
