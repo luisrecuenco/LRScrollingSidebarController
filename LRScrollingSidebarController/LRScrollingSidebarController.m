@@ -93,7 +93,7 @@ static CGFloat const kMainViewControllerOverlayMaxAlpha = 0.9f;
 
 - (void)buildUpMainHierarchy
 {
-	self.overlay = [[UIView alloc] initWithFrame:self.mainViewController.view.bounds];
+    self.overlay = [[UIView alloc] initWithFrame:self.mainViewController.view.bounds];
     self.overlay.backgroundColor = self.mainViewControllerOverlayColor;
     self.overlay.alpha = self.mainViewControllerOverlayMaxAlpha;
 
