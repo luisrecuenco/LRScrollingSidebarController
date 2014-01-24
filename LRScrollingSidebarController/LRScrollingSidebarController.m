@@ -93,6 +93,10 @@ static CGFloat const kMainViewControllerOverlayMaxAlpha = 0.9f;
 
 - (void)buildUpMainHierarchy
 {
+	self.overlay = [[UIView alloc] initWithFrame:self.mainViewController.view.bounds];
+    self.overlay.backgroundColor = self.mainViewControllerOverlayColor;
+    self.overlay.alpha = self.mainViewControllerOverlayMaxAlpha;
+
     [self replaceLeftViewController:self.leftViewController];
     [self replaceRightViewController:self.rightViewController];
     [self replaceMainViewController:self.mainViewController];
@@ -129,9 +133,6 @@ static CGFloat const kMainViewControllerOverlayMaxAlpha = 0.9f;
                           parentView:self.scrollView];
     [self.view bringSubviewToFront:self.scrollView];
     
-	self.overlay = [[UIView alloc] initWithFrame:self.mainViewController.view.bounds];
-    self.overlay.backgroundColor = self.mainViewControllerOverlayColor;
-    self.overlay.alpha = self.mainViewControllerOverlayMaxAlpha;
     [self.mainViewController.view addSubview:self.overlay];
 }
 
