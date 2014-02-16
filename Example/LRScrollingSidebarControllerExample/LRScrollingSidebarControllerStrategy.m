@@ -1,4 +1,4 @@
-// UIViewController+LRScrollingSidebarController.m
+// LRScrollingSidebarControllerStrategy.m
 //
 // Copyright (c) 2014 Luis Recuenco
 //
@@ -20,10 +20,56 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "LRScrollingSidebarController.h"
+#import "LRScrollingSidebarControllerStrategy.h"
 
-@interface UIViewController (LRScrollingSidebarController)
+#pragma mark - LRScrollingSidebarControllerStrategyTwoPanels Implementation
 
-@property (nonatomic, weak) LRScrollingSidebarController *scrollingSidebarController;
+@implementation LRScrollingSidebarControllerStrategyTwoPanels
+
+- (BOOL)shouldAddLeftViewControllerToHierarchy
+{
+    return YES;
+}
+
+- (BOOL)shouldAddMainViewControllerToHierarchy
+{
+    return YES;
+}
+
+- (BOOL)shouldAddRightViewControllerToHierarchy
+{
+    return NO;
+}
+
+- (NSUInteger)numberOfPanels
+{
+    return 2;
+}
+
+@end
+
+#pragma mark - LRScrollingSidebarControllerStrategyThreePanels Implementation
+
+@implementation LRScrollingSidebarControllerStrategyThreePanels
+
+- (BOOL)shouldAddLeftViewControllerToHierarchy
+{
+    return YES;
+}
+
+- (BOOL)shouldAddMainViewControllerToHierarchy
+{
+    return YES;
+}
+
+- (BOOL)shouldAddRightViewControllerToHierarchy
+{
+    return YES;
+}
+
+- (NSUInteger)numberOfPanels
+{
+    return 3;
+}
 
 @end

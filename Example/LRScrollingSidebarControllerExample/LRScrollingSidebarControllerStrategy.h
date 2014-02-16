@@ -1,4 +1,4 @@
-// UIViewController+LRScrollingSidebarController.m
+// LRScrollingSidebarControllerStrategy.h
 //
 // Copyright (c) 2014 Luis Recuenco
 //
@@ -20,10 +20,26 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "LRScrollingSidebarController.h"
+#import <Foundation/Foundation.h>
 
-@interface UIViewController (LRScrollingSidebarController)
+#pragma mark - LRScrollingSidebarControllerStrategy Protocol
 
-@property (nonatomic, weak) LRScrollingSidebarController *scrollingSidebarController;
+@protocol LRScrollingSidebarControllerStrategy <NSObject>
 
+- (BOOL)shouldAddLeftViewControllerToHierarchy;
+- (BOOL)shouldAddMainViewControllerToHierarchy;
+- (BOOL)shouldAddRightViewControllerToHierarchy;
+
+- (NSUInteger)numberOfPanels;
+
+@end
+
+#pragma mark - LRScrollingSidebarControllerStrategyTwoPanels Interface
+
+@interface LRScrollingSidebarControllerStrategyTwoPanels : NSObject <LRScrollingSidebarControllerStrategy>
+@end
+
+#pragma mark - LRScrollingSidebarControllerStrategyThreePanels Interface
+
+@interface LRScrollingSidebarControllerStrategyThreePanels : NSObject <LRScrollingSidebarControllerStrategy>
 @end

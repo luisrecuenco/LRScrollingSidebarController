@@ -45,6 +45,7 @@
                                                         mainViewController:mainViewController
                                                         rightViewController:rightViewController
                                                         mainViewControllerGap:15.0f];
+    
     rootViewController.mainViewControllerOverlayColor = [UIColor cyanColor];
     rootViewController.mainViewControllerOverlayMaxAlpha = 0.7;
     rootViewController.delegate = self;

@@ -24,6 +24,7 @@
 #import "LRSidebarScrollView.h"
 #import "LRSidebarScrollView+Private.h"
 #import "UIViewController+LRScrollingSidebarController.h"
+#import "LRScrollingSidebarControllerStrategy.h"
 
 NSString *const kScrollViewWillBeginDraggingNotification = @"kScrollViewWillBeginDraggingNotification";
 NSString *const kScrollViewDidEndDraggingNotification = @"kScrollViewDidEndDraggingNotification";
@@ -37,6 +38,8 @@ static CGFloat const kMainViewControllerOverlayMaxAlpha = 0.9f;
 @property (nonatomic, strong) LRSidebarScrollView *scrollView;
 
 @property (nonatomic, strong) UIView *overlay;
+
+@property (nonatomic, strong) id<LRScrollingSidebarControllerStrategy> strategy;
 
 @end
 
@@ -55,6 +58,9 @@ static CGFloat const kMainViewControllerOverlayMaxAlpha = 0.9f;
     
     _mainViewControllerGap = mainViewControllerGap;
     
+    _strategy = _rightViewController ? [[LRScrollingSidebarControllerStrategyThreePanels alloc] init] :
+                                       [[LRScrollingSidebarControllerStrategyTwoPanels alloc] init];
+
     [self applyDefaults];
     
     return self;
@@ -106,6 +112,8 @@ static CGFloat const kMainViewControllerOverlayMaxAlpha = 0.9f;
 
 - (void)replaceLeftViewController:(ISSidePanelController)leftViewController
 {
+    if (![self.strategy shouldAddLeftViewControllerToHierarchy]) return;
+    
     [self removeSidePanelViewController:_leftViewController];
     _leftViewController = leftViewController;
     [self setScrollingSidebarControllerToChildViewController:_leftViewController];
@@ -116,6 +124,8 @@ static CGFloat const kMainViewControllerOverlayMaxAlpha = 0.9f;
 
 - (void)replaceMainViewController:(ISSidePanelController)mainViewController
 {
+    if (![self.strategy shouldAddMainViewControllerToHierarchy]) return;
+
     [self removeSidePanelViewController:_mainViewController];
     _mainViewController = mainViewController;
     [self setScrollingSidebarControllerToChildViewController:_mainViewController];
@@ -138,6 +148,8 @@ static CGFloat const kMainViewControllerOverlayMaxAlpha = 0.9f;
 
 - (void)replaceRightViewController:(ISSidePanelController)rightViewController
 {
+    if (![self.strategy shouldAddRightViewControllerToHierarchy]) return;
+
     [self removeSidePanelViewController:_rightViewController];
     _rightViewController = rightViewController;
     [self setScrollingSidebarControllerToChildViewController:_rightViewController];
@@ -169,6 +181,8 @@ static CGFloat const kMainViewControllerOverlayMaxAlpha = 0.9f;
 
 - (void)showLeftViewControllerAnimated:(BOOL)animated
 {
+    if (![self.strategy shouldAddLeftViewControllerToHierarchy]) return;
+
     [self scrollViewWillBeginDragging:self.scrollView];
     
     self.leftViewController.view.hidden = NO;
@@ -179,6 +193,8 @@ static CGFloat const kMainViewControllerOverlayMaxAlpha = 0.9f;
 
 - (void)showMainViewControllerAnimated:(BOOL)animated
 {
+    if (![self.strategy shouldAddMainViewControllerToHierarchy]) return;
+
     [self scrollViewWillBeginDragging:self.scrollView];
     
     [self activateScrollingSidebarNavigation];
@@ -191,6 +207,8 @@ static CGFloat const kMainViewControllerOverlayMaxAlpha = 0.9f;
 
 - (void)showRightViewControllerAnimated:(BOOL)animated
 {
+    if (![self.strategy shouldAddRightViewControllerToHierarchy]) return;
+
     [self scrollViewWillBeginDragging:self.scrollView];
     
     self.leftViewController.view.hidden = YES;
@@ -223,7 +241,8 @@ static CGFloat const kMainViewControllerOverlayMaxAlpha = 0.9f;
 
 - (void)activateScrollingSidebarNavigation
 {
-    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * 3,
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width *
+                                             [self.strategy numberOfPanels],
                                              self.scrollView.frame.size.height);
 }
 
