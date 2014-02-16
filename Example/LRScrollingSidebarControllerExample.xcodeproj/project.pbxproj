@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		336317D018B0E0E600F1A209 /* LRScrollingSidebarControllerStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 336317CF18B0E0E600F1A209 /* LRScrollingSidebarControllerStrategy.m */; };
+		336317D318B0E58B00F1A209 /* LRScrollingSidebarControllerStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 336317D218B0E58B00F1A209 /* LRScrollingSidebarControllerStrategy.m */; };
 		33C7DDB9188CA54D00116FEC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C7DDB8188CA54D00116FEC /* Foundation.framework */; };
 		33C7DDBB188CA54D00116FEC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C7DDBA188CA54D00116FEC /* CoreGraphics.framework */; };
 		33C7DDBD188CA54D00116FEC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C7DDBC188CA54D00116FEC /* UIKit.framework */; };
@@ -43,8 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		336317CE18B0E0E600F1A209 /* LRScrollingSidebarControllerStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRScrollingSidebarControllerStrategy.h; sourceTree = "<group>"; };
-		336317CF18B0E0E600F1A209 /* LRScrollingSidebarControllerStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRScrollingSidebarControllerStrategy.m; sourceTree = "<group>"; };
+		336317D118B0E58B00F1A209 /* LRScrollingSidebarControllerStrategy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LRScrollingSidebarControllerStrategy.h; path = ../../LRScrollingSidebarController/LRScrollingSidebarControllerStrategy.h; sourceTree = "<group>"; };
+		336317D218B0E58B00F1A209 /* LRScrollingSidebarControllerStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LRScrollingSidebarControllerStrategy.m; path = ../../LRScrollingSidebarController/LRScrollingSidebarControllerStrategy.m; sourceTree = "<group>"; };
 		33C7DDB5188CA54D00116FEC /* LRScrollingSidebarControllerExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LRScrollingSidebarControllerExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C7DDB8188CA54D00116FEC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		33C7DDBA188CA54D00116FEC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -188,8 +188,8 @@
 				33F506E2188CB3DF0066B30B /* LRSidebarScrollView+Private.h */,
 				33F506F5188CBF3E0066B30B /* UIViewController+LRScrollingSidebarController.h */,
 				33F506F6188CBF3E0066B30B /* UIViewController+LRScrollingSidebarController.m */,
-				336317CE18B0E0E600F1A209 /* LRScrollingSidebarControllerStrategy.h */,
-				336317CF18B0E0E600F1A209 /* LRScrollingSidebarControllerStrategy.m */,
+				336317D118B0E58B00F1A209 /* LRScrollingSidebarControllerStrategy.h */,
+				336317D218B0E58B00F1A209 /* LRScrollingSidebarControllerStrategy.m */,
 			);
 			name = LRScrollingSidebarController;
 			sourceTree = "<group>";
@@ -322,7 +322,7 @@
 				33F506F1188CBD9B0066B30B /* MainViewController.m in Sources */,
 				33F506F7188CBF3E0066B30B /* UIViewController+LRScrollingSidebarController.m in Sources */,
 				33F506EE188CBD910066B30B /* LeftViewController.m in Sources */,
-				336317D018B0E0E600F1A209 /* LRScrollingSidebarControllerStrategy.m in Sources */,
+				336317D318B0E58B00F1A209 /* LRScrollingSidebarControllerStrategy.m in Sources */,
 				33F506E0188CA5900066B30B /* LRSidebarScrollView.m in Sources */,
 				33F50700188E0BB70066B30B /* LRRandomColor.m in Sources */,
 				33C7DDC9188CA54D00116FEC /* AppDelegate.m in Sources */,
