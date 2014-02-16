@@ -21,7 +21,6 @@
 // THE SOFTWARE.
 
 #import "LRScrollingSidebarController.h"
-#import "LRSidebarScrollView.h"
 #import "LRSidebarScrollView+Private.h"
 #import "UIViewController+LRScrollingSidebarController.h"
 #import "LRScrollingSidebarControllerStrategy.h"
@@ -93,8 +92,27 @@ static CGFloat const kMainViewControllerOverlayMaxAlpha = 0.9f;
     });
     
     [self buildUpMainHierarchy];
-    [self showLeftViewControllerAnimated:NO];
+    [self showInitialPanel];
     [self activateScrollingSidebarNavigation];
+}
+
+- (void)showInitialPanel
+{
+    switch (self.initialState)
+    {
+        case LRSidebarScrollViewStateUnknown:
+        case LRSidebarScrollViewStateLeft:
+            [self showLeftViewControllerAnimated:NO];
+            break;
+        case LRSidebarScrollViewStateCenter:
+            [self showMainViewControllerAnimated:NO];
+            break;
+        case LRSidebarScrollViewStateRight:
+            [self showRightViewControllerAnimated:NO];
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)buildUpMainHierarchy

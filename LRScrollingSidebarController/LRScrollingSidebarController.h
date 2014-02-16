@@ -20,7 +20,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
+#import "LRSidebarScrollView.h"
 
 extern NSString *const kScrollViewWillBeginDraggingNotification;
 extern NSString *const kScrollViewDidEndDraggingNotification;
@@ -40,6 +40,8 @@ typedef UIViewController<LRScrollingSidebarController> *ISSidePanelController;
 @property (nonatomic, strong, readonly) ISSidePanelController rightViewController;
 
 @property (nonatomic, readonly) CGFloat mainViewControllerGap;
+
+@property (nonatomic) LRSidebarScrollViewState initialState;
 
 @property (nonatomic) UIColor *mainViewControllerOverlayColor;
 @property (nonatomic) CGFloat mainViewControllerOverlayMaxAlpha;
