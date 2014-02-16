@@ -1,4 +1,4 @@
-// UIViewController+LRScrollingSidebarController.m
+// UIViewController+LRScrollingSidebarController.h
 //
 // Copyright (c) 2014 Luis Recuenco
 //
