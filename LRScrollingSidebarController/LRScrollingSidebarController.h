@@ -51,6 +51,8 @@ typedef UIViewController<LRScrollingSidebarController> *ISSidePanelController;
 
 @property (nonatomic) BOOL allowBouncing;
 @property (nonatomic) BOOL allowParallax;
+@property (nonatomic) UIStatusBarStyle statusbarStyle;
+@property(nonatomic, getter=isStatusBarHidden) BOOL statusBarHidden;
 
 @property (nonatomic, weak) id<LRScrollingSidebarControllerDelegate> delegate;
 

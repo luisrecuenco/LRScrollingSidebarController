@@ -94,6 +94,7 @@ static CGFloat const kMainViewControllerOverlayMaxAlpha = 0.9f;
     [self buildUpMainHierarchy];
     [self showInitialPanel];
     [self activateScrollingSidebarNavigation];
+    [self updateStatusBarStyle];
 }
 
 - (void)showInitialPanel
@@ -306,6 +307,7 @@ static CGFloat const kMainViewControllerOverlayMaxAlpha = 0.9f;
     
     [self applyParallaxEffect];
     [self applyOverlayEffect];
+    [self updateStatusBarStyle];
 }
 
 - (void)applyParallaxEffect
@@ -413,6 +415,37 @@ static CGFloat const kMainViewControllerOverlayMaxAlpha = 0.9f;
 - (NSUInteger)supportedInterfaceOrientations
 {
     return UIInterfaceOrientationMaskPortrait;
+}
+
+#pragma mark - status bar
+
+// allows to use the child's StatusBar
+- (UIViewController *)childViewControllerForStatusBarStyle
+{
+    return [self visibleController];
+}
+
+- (UIViewController *)childViewControllerForStatusBarHidden
+{
+    return [self visibleController];
+}
+
+- (void)updateStatusBarStyle
+{
+    if ([self respondsToSelector:@selector(setNeedsStatusBarAppearanceUpdate)]) {
+        [self setNeedsStatusBarAppearanceUpdate];
+    }
+}
+
+// adjust the style of the base status bar while the app is running
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return self.statusbarStyle;
+}
+
+-(BOOL) prefersStatusBarHidden
+{
+    return self.isStatusBarHidden;
 }
 
 @end
