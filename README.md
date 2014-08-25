@@ -1,6 +1,11 @@
 LRScrollingSidebarController
 ============================
 
+[![Build Status](http://img.shields.io/travis/luisrecuenco/LRScrollingSidebarController/master.svg?style=flat)](https://travis-ci.org/luisrecuenco/LRScrollingSidebarController)
+[![Pod Version](http://img.shields.io/cocoapods/v/LRScrollingSidebarController.svg?style=flat)](http://cocoadocs.org/docsets/LRScrollingSidebarController/)
+[![Pod Platform](http://img.shields.io/cocoapods/p/LRScrollingSidebarController.svg?style=flat)](http://cocoadocs.org/docsets/LRScrollingSidebarController/)
+[![Pod License](http://img.shields.io/cocoapods/l/LRScrollingSidebarController.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0.html)
+
 A scrolling based sidebar controller
 
 ### The problem about current implementations
