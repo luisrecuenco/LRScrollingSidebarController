@@ -114,6 +114,24 @@ The category UIViewController+LRScrollingSidebarController aims at making every 
 ```
 [self.scrollingSidebarController showMainViewControllerAnimated:YES];
 ```
+Additionally you can change or hide the initial status bar
+
+```
+@property (nonatomic) UIStatusBarStyle statusbarStyle;
+@property(nonatomic, getter=isStatusBarHidden) BOOL statusBarHidden;
+```
+Or change it or hide it individually from each of your child controllers by adding one of these two methods
+
+```
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
+}
+
+-(BOOL) prefersStatusBarHidden {
+    return YES;
+}
+```
+Note: we are assuming that your "View controller-based status bar appearance" in your info.plist is set to YES
 
 ### Requirements
 
