@@ -51,6 +51,7 @@ typedef UIViewController<LRScrollingSidebarController> *ISSidePanelController;
 
 @property (nonatomic) BOOL allowBouncing;
 @property (nonatomic) BOOL allowParallax;
+@property (nonatomic) BOOL allowTabToDismiss;
 
 @property (nonatomic, weak) id<LRScrollingSidebarControllerDelegate> delegate;
 

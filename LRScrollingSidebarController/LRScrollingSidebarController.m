@@ -121,6 +121,12 @@ static CGFloat const kMainViewControllerOverlayMaxAlpha = 0.9f;
     self.overlay.backgroundColor = self.mainViewControllerOverlayColor;
     self.overlay.alpha = self.mainViewControllerOverlayMaxAlpha;
 
+    if (self.allowTabToDismiss) {
+        UITapGestureRecognizer *dismissTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissSidebarController:)];
+        dismissTap.numberOfTapsRequired = 1;
+        [self.overlay addGestureRecognizer:dismissTap];
+    }
+
     [self replaceLeftViewController:self.leftViewController];
     [self replaceRightViewController:self.rightViewController];
     [self replaceMainViewController:self.mainViewController];
@@ -253,6 +259,17 @@ static CGFloat const kMainViewControllerOverlayMaxAlpha = 0.9f;
 - (void)setScrollingSidebarControllerToChildViewController:(ISSidePanelController)childViewController
 {
     childViewController.scrollingSidebarController = self;
+}
+
+- (void)dismissSidebarController:(UIGestureRecognizer *)sender
+{
+    if (![self.strategy shouldAddMainViewControllerToHierarchy]) return;
+    
+    [self scrollViewWillBeginDragging:self.scrollView];
+    
+    [self activateScrollingSidebarNavigation];
+    
+    [self.scrollView setScrollViewState:LRSidebarScrollViewStateCenter animated:YES];
 }
 
 #pragma mark - Activate & Deactiviate scrolling sidebar navigation
